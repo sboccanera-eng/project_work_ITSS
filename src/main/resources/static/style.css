@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-blue: #007bff; /* Blu dominante nell'interfaccia */
-  --secondary-blue: #0d6efd; /* Un blu leggermente diverso per i bottoni */
-  --bg-light: #f7f9fc;
+  --primary-blue: #009999; /* Blu dominante nell'interfaccia */
+  --secondary-blue: #028b8b; /* Un blu leggermente diverso per i bottoni */
+  --bg-light: #e3fcfc;
   --text-dark: #333;
   --text-medium: #555;
   --border-color: #e0e0e0;
-  --card-hover-bg: #f0f4ff; /* Sfondo per la card attiva */
+  --card-hover-bg: #e3fcfc; /* Sfondo per la card attiva */
   --color-red: #dc3545;
 }
 
@@ -25,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 20px;
 }
 
 /* ---------------------------------- */
@@ -37,8 +38,8 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   display: flex;
   width: 100%;
+  height: 95vh; /* Altezza per simulare la vista unica */
   overflow: hidden;
-  height: 100vh;
 }
 
 /* ---------------------------------- */
@@ -89,9 +90,9 @@ body {
 }
 
 .profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
   object-fit: cover;
   border: 2px solid var(--border-color);
 }
@@ -183,7 +184,7 @@ h2 strong {
 
 .job-card:hover {
   border-color: var(--primary-blue);
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+  box-shadow: 0 4px 10px #e3fcfc;
 }
 
 .job-card.active {
@@ -408,5 +409,5 @@ h2 strong {
 }
 
 .apply-btn:hover {
-  background-color: #0c5ed7;
+  background-color: #028b8bc9;
 }

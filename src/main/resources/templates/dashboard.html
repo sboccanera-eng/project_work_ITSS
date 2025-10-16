@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ricerca Lavoro - Template</title>
+    <link rel="stylesheet" href="/src/main/resources/static/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Barra laterale sinistra (Sidebar)-->
+      <div class="sidebar">
+        <div class="sidebar-icon top-icon">
+          <i class="material-icons">search</i>
+        </div>
+        <a href="#" class="sidebar-icon active"
+          ><i class="material-icons">home</i></a
+        >
+        <a href="#" class="sidebar-icon"
+          ><i class="material-icons">bookmark_border</i></a
+        >
+        <a href="#" class="sidebar-icon"
+          ><i class="material-icons">work_outline</i></a
+        >
+        <a href="#" class="sidebar-icon"
+          ><i class="material-icons">schedule</i></a
+        >
+        <a href="#" class="sidebar-icon"><i class="material-icons">inbox</i></a>
+        <a href="#" class="sidebar-icon"
+          ><i class="material-icons">settings</i></a
+        >
+        <div class="user-profile">
+          <img src="placeholder-user.jpg" alt="User" class="profile-pic" />
+        </div>
+      </div>
+
+      <main class="content-area">
+        <header class="search-header">
+          <div class="search-box">
+            <i class="material-icons search-icon">search</i>
+            <input
+              type="text"
+              placeholder="Cerca per Titolo, Compagnia o Parola chiave..."
+            />
+          </div>
+          <h2 id="seach-critery">*Criterio di ricerca*</h2>
+          <div class="filter-pills" id="filter-list">
+            <span class="pill primary">+ UI/UX</span>
+            <span class="pill">+ Graphic Design</span>
+            <span class="pill">+ Front-end</span>
+            <span class="pill">+ Web Developer</span>
+            <span class="pill">+ UI Developer</span>
+            <span class="pill">...</span>
+          </div>
+        </header>
+
+        <section class="job-list" id="job-list">
+          <article class="job-card active">
+            <img class="company-logo"></img>
+            <div class="job-info">
+              <span class="status-tag">Pubblicato</span>
+              <h3>Stage visual **UX/UI designer**</h3>
+              <p class="company-name">Booking</p>
+              <p class="job-description">
+                Learn about Tesla's commitment to making clean energy accessible
+                and affordable with a range of electric vehicles and energy
+                generation and storage...
+              </p>
+              <div class="tags-row">
+                <span class="location-tag">UX Designer</span>
+                <span class="location-tag">Php Developer</span>
+                <span class="location-tag">.Net Developer</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="job-card">
+            <div class="company-logo bg-red">T</div>
+            <div class="job-info">
+              <span class="salary">$180/Hr</span>
+              <h3>Senior UI/UX Designer</h3>
+              <p class="company-name">Tesla</p>
+              <p class="job-description">
+                Learn about Tesla's commitment to making clean energy accessible
+                and affordable with a range of electric vehicles and energy
+                generation and storage...
+              </p>
+            </div>
+          </article>
+
+          <article class="job-card">
+            <div class="company-logo bg-gray-light">A</div>
+            <div class="job-info">
+              <span class="salary">$140/Hr</span>
+              <h3>Senior Product Designer</h3>
+              <p class="company-name">Apple</p>
+              <p class="job-description">
+                Apple Inc. is an American multinational technology company
+                headquartered in Cupertino, California, that designs, develops,
+                and sells consumer electronics
+              </p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <aside class="job-details-panel">
+        <div class="company-header">
+          <div class="company-logo bg-blue large">B</div>
+          <h2>Stage visual UX/UI designer</h2>
+          <p>Booking</p>
+          <div class="detail-tabs">
+            <button class="tab active">Vacancy</button>
+            <button class="tab">Company</button>
+          </div>
+        </div>
+
+        <div class="details-content">
+          <p>
+            You will analyse the testing needs and challenges of our clients and
+            as a consultant provide them with appropriate crowd-based testing
+            solutions.
+          </p>
+          <p>
+            You like to outperform in acquiring new clients and thus
+            independently expand your own customer base in France and Belgium.
+          </p>
+          <p>
+            You imagine potential and existing B2B clients on-site, on the
+            phone, in webcasts and during (inter/national events) about ways for
+            Documentation.
+          </p>
+          <div class="document-link">
+            <i class="material-icons">description</i>
+            <span>recruitment.pdf</span>
+          </div>
+        </div>
+
+        <div class="apply-actions">
+          <button class="favorite-btn">
+            <i class="material-icons">favorite_border</i>
+          </button>
+          <button class="apply-btn">Upload CV</button>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

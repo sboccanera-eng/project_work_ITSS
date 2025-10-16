@@ -1,10 +1,10 @@
-package dev2426.cheistian_project_work;
+package dev2426.ITSProjectWork;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CheistianProjectWorkApplicationTests {
+class ItsProjectWorkApplicationTests {
 
 	@Test
 	void contextLoads() {

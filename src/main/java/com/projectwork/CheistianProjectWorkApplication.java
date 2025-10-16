@@ -1,4 +1,4 @@
-package dev2426.cheistian_project_work;
+package com.projectwork;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -19,7 +19,7 @@ public class UtentiService {
 				
 	}
 	
-	public Optional<Utente> find(long idCerca) {
+	public Optional<Utente> findId(long idCerca) {
 		return repo.findById(idCerca);
 	}
 	
@@ -43,7 +43,7 @@ public class UtentiService {
 		t.setCognome(nuova.getCognome());
 		t.setEmail(nuova.getEmail());
 		t.setPassword(nuova.getPassword());
-		t.setCV(nuova.getCV());
+		t.setCV(nuova.getCV()	);
 		
 		repo.save(t);
 

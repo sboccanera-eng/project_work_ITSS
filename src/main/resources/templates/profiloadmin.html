@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pannello Admin - Gestione Candidature</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="admin-header">
+        <h1>Pannello di Amministrazione</h1>
+        <p>Gestione Candidature e Tirocini</p>
+    </header>
+
+    <main class="admin-container">
+        <section class="section-form">
+            <h2>Aggiungi/Modifica Tirocinio</h2>
+            <form class="tirocinio-form">
+                <div class="form-group">
+                    <label for="titolo">Titolo Annuncio:</label>
+                    <input type="text" id="titolo" name="titolo" required>
+                </div>
+                <div class="form-group">
+                    <label for="azienda">Azienda:</label>
+                    <input type="text" id="azienda" name="azienda" required>
+                </div>
+                <div class="form-group">
+                    <label for="orari">Orari di Lavoro:</label>
+                    <input type="text" id="orari" name="orari">
+                </div>
+                <div class="form-group full-width">
+                    <label for="competenze-richieste">Competenze Richieste:</label>
+                    <textarea id="competenze-richieste" name="competenze-richieste" rows="3"></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <label for="competenze-acquisibili">Competenze Acquisibili:</label>
+                    <textarea id="competenze-acquisibili" name="competenze-acquisibili" rows="3"></textarea>
+                </div>
+
+                <div class="form-actions full-width">
+                    <button type="submit" class="btn-primary">Salva/Aggiorna Tirocinio</button>
+                    <button type="reset" class="btn-secondary">Svuota Form</button>
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="section-table">
+            <h2>Candidature Ricevute</h2>
+            <p>Lista delle persone che si sono candidate ai tirocini.</p>
+            
+            <table class="candidature-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Candidato</th>
+                        <th>Annuncio</th>
+                        <th>Data Candidatura</th>
+                        <th>Stato Attuale</th>
+                        <th>Azioni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Mario Rossi</td>
+                        <td>Frontend Developer</td>
+                        <td>15/10/2025</td>
+                        <td><span class="status status-pending">In Attesa</span></td>
+                        <td>
+                            <button class="btn-action view">Visualizza CV</button>
+                            <button class="btn-action accept">Accetta</button>
+                            <button class="btn-action reject">Rifiuta</button>
+                            <button class="btn-action remove">Rimuovi</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Laura Verdi</td>
+                        <td>Junior UX Designer</td>
+                        <td>01/10/2025</td>
+                        <td><span class="status status-accepted">Accettata</span></td>
+                        <td>
+                            <button class="btn-action view">Visualizza CV</button>
+                            <button class="btn-action reject">Rifiuta</button>
+                            <button class="btn-action remove">Rimuovi</button>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

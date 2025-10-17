@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" **xmlns:th="http://www.thymeleaf.org"**>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,26 +12,25 @@
   </head>
   <body>
     <div class="app-container">
-      <!-- Barra laterale sinistra (Sidebar)-->
       <div class="sidebar">
-        <a href="#" class="sidebar-icon active"
+        <a th:href="@{/}" class="sidebar-icon active"**
           ><i class="material-icons">home</i></a
         >
-        <a href="#" class="sidebar-icon"
+        <a th:href="@{/bookmarks}" class="sidebar-icon"**
           ><i class="material-icons">bookmark_border</i></a
         >
-        <a href="#" class="sidebar-icon"
+        <a th:href="@{/jobs}" class="sidebar-icon"**
           ><i class="material-icons">work_outline</i></a
         >
-        <a href="#" class="sidebar-icon"
+        <a th:href="@{/schedule}" class="sidebar-icon"**
           ><i class="material-icons">schedule</i></a
         >
-        <a href="#" class="sidebar-icon"><i class="material-icons">inbox</i></a>
-        <a href="#" class="sidebar-icon"
+        <a th:href="@{/inbox}" class="sidebar-icon"><i class="material-icons">inbox</i></a>
+        <a th:href="@{/settings}" class="sidebar-icon"**
           ><i class="material-icons">settings</i></a
         >
         <div class="user-profile">
-          <img src="/src/main/resources/static/Foto del 2025-10-16 17-13-41.803040.jpeg" alt="User" class="profile-pic" />
+          <img th:src="@{/image/image.png}" alt="User" class="profile-pic" />
         </div>
       </div>
 

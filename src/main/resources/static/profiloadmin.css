@@ -1,0 +1,210 @@
+/* Stile Generale Admin */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef1f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-header {
+    background-color: #343a40; /* Grigio scuro/Nero */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* Aggiunto padding per il pulsante */
+    position: relative; 
+}
+
+/* NUOVI STILI AGGIUNTI PER IL PULSANTE DI SWITCH */
+.nav-switch-button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #007bff; /* Blu, per risaltare */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    border: 1px solid #007bff;
+}
+
+.nav-switch-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+/* FINE NUOVI STILI */
+
+.admin-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Sezioni */
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* 1. Stile Form Esteso Tirocinio */
+.tirocinio-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1; /* Occupa tutta la larghezza */
+}
+
+.tirocinio-form label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.tirocinio-form input[type="text"], 
+.tirocinio-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tirocinio-form textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Pulsanti */
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* 2. Stile Tabella Candidature */
+.candidature-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.candidature-table th, .candidature-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.candidature-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+}
+
+.candidature-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Stili Stato Candidatura */
+.status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.status-pending {
+    background-color: #ffc107; /* Giallo */
+    color: #333;
+}
+
+.status-accepted {
+    background-color: #28a745; /* Verde */
+}
+
+.status-rejected {
+    background-color: #dc3545; /* Rosso */
+}
+
+/* Pulsanti Azioni Tabella */
+.btn-action {
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+    transition: opacity 0.2s;
+}
+
+.btn-action:hover {
+    opacity: 0.8;
+}
+
+.btn-action.view {
+    background-color: #17a2b8; /* Blu-ciano */
+    color: white;
+}
+.btn-action.accept {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+.btn-action.reject {
+    background-color: #dc3545; /* Rosso */
+    color: white;
+}
+.btn-action.remove {
+    background-color: #6c757d; /* Grigio */
+    color: white;
+}

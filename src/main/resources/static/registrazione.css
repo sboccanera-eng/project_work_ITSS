@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Uno sfondo grigio chiaro per staccare dal bianco della form */
+    background: linear-gradient(135deg, #afe8e8 0%, #009999 100%); 
     display: flex;
     justify-content: center; /* Centra orizzontalmente */
     align-items: center; /* Centra verticalmente */

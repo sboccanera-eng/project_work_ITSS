@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrazione</title>
+    <link rel="stylesheet" href="/css/registrazione.css" />
+  </head>
+  <body>
+    <div class="registration-container">
+      <h2>Registrati</h2>
+      <form
+        class="registration-form"
+        th:action="register"
+        method="POST"
+        onsubmit="return checkPasswordMatch()"
+      >
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+
+        <div class="form-group">
+          <label for="cognome">Cognome</label>
+          <input type="text" id="cognome" name="cognome" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Indirizzo Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="8"
+          />
+          <small>Minimo 8 caratteri</small>
+        </div>
+
+        <div class="form-group">
+          <label for="conferma_password">Conferma Password</label>
+          <input
+            type="password"
+            id="conferma_password"
+            name="conferma_password"
+            required
+          />
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="privacy" name="privacy" required />
+          <label for="privacy"
+            >Accetto l'<a href="#">Informativa sulla Privacy</a></label
+          >
+        </div>
+
+        <button type="submit" class="submit-button">Registrati</button>
+      </form>
+      <script>
+        function checkPasswordMatch() {
+          const pwd = document.getElementById("password").value;
+          const conf = document.getElementById("conferma_password").value;
+          if (pwd !== conf) {
+            alert("Le password non coincidono!");
+            return false;
+          }
+          return true;
+        }
+      </script>
+    </div>
+  </body>
+</html>

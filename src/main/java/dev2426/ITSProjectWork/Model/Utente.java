@@ -81,4 +81,18 @@ public class Utente {
 		
 	}
 
+
+	@Override
+	public String toString() {
+		return "{" +
+			" idUtente='" + getIdUtente() + "'" +
+			", nome='" + getNome() + "'" +
+			", cognome='" + getCognome() + "'" +
+			", email='" + getEmail() + "'" +
+			", password='" + getPassword() + "'" +
+			", CV='" + getCV() + "'" +
+			"}";
+	}
+
+
 }

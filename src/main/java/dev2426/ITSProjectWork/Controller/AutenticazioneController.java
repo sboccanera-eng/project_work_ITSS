@@ -18,19 +18,20 @@ public class AutenticazioneController {
 	    
 	    @GetMapping("/login")
 	    public String showLogin() {
-	        return "login"; 
+	        return "/public/login"; 
 	    }
 	    
 	    @GetMapping("/register")
 	    public String showRegister(Model model) {
 	        model.addAttribute("utente", new Utente());
-	        return "registrazione"; 
+	        return "/public/registrazione"; 
 	    }
 
 	    @PostMapping("/register")
-	    public String processRegistration(@ModelAttribute("utente") Utente utente) {
+		public String processRegistration(@ModelAttribute("utente") Utente utente) {
+			System.out.println(utente.toString());
 	        serv.insert(utente);
-	        return "redirect:/login?success";
+	        return "redirect:/private/dashboard";
 	    }
 
 }

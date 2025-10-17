@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import dev2426.ITSProjectWork.Model.Utente;
@@ -14,6 +15,9 @@ public class UtentiService {
 
 	@Autowired
 	private UtentiRepository repo;
+	
+	@Autowired
+    private PasswordEncoder passwordEncoder;
 	
 	public List<Utente> getAll() {
 		
@@ -27,6 +31,8 @@ public class UtentiService {
 	
 	public void insert(Utente nuova) {
 		
+		String passwordCriptata = passwordEncoder.encode(nuova.getPassword());
+        nuova.setPassword(passwordCriptata);
 		repo.save(nuova);
 		
 	}
@@ -37,18 +43,22 @@ public class UtentiService {
 	
 	public void update(long idUpdate, Utente nuova) {
 
-		Optional<Utente> found = repo.findById(idUpdate);
-		Utente t = found.get();
+	    Optional<Utente> found = repo.findById(idUpdate);
+	    if (found.isPresent()) {
+	 
+	        Utente t = found.get();
 
-		t.setIdUtente(nuova.getIdUtente());
-		t.setNome(nuova.getNome());
-		t.setCognome(nuova.getCognome());
-		t.setEmail(nuova.getEmail());
-		t.setPassword(nuova.getPassword());
-		t.setCV(nuova.getCV()	);
-		
-		repo.save(t);
-
-	}	
+	        t.setNome(nuova.getNome());
+	        t.setCognome(nuova.getCognome());
+	        t.setEmail(nuova.getEmail());
+	        t.setCV(nuova.getCV());
+	        
+	        if (nuova.getPassword() != null && !nuova.getPassword().isEmpty()) {
+	            t.setPassword(passwordEncoder.encode(nuova.getPassword()));
+	        }
+	        
+	        repo.save(t);
+	    }
+	}
 }
 

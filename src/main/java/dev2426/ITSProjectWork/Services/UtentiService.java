@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import dev2426.ITSProjectWork.Model.Utente;
 import dev2426.ITSProjectWork.Repository.UtentiRepository;
 
+@Service
 public class UtentiService {
 
 	@Autowired

@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login / Signup</title>
-    <link rel="stylesheet" href="../static/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../static/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="container">
-
-        <div class="login-panel">
-            <div class="logo-placeholder">
-              <div class=""><img src="../templates/image/logooooo.jfif" alt="" height="130px" ></div>
-            </div>          
-            <h2 class="login-title">Login</h2>
-            
-            <form class="login-form">
-                
-                <div class="input-group">
-                    <i class="fa-regular fa-envelope"></i>
-                    <input type="text" placeholder="Inserisci la tua Email" required>
-                </div>
-
-                <div class="input-group">
-                    <i class="fa-solid fa-key"></i>
-                    <input type="password" placeholder="Inserisci la tua password" required>
-                </div>
-
-                <div class="options">
-                    <label class="checkbox-container">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Ricordami
-                    </label>
-                    <a href="#" class="forgot-password">Password dimenticata?</a>
-                </div>
-
-                <button type="submit" class="log-in-btn">
-                    <i class="fa-solid fa-right-to-bracket"></i> LOG IN
-                </button>
-            </form>
+      <div class="login-panel">
+        <div class="logo-placeholder">
+          <img
+            src="/src/main/resources/static/image/logo2.png"
+            alt=""
+            height="130px"
+          />
         </div>
+        <h2 class="login-title">Login</h2>
+
+        <form class="login-form" th:action="@{/login}">
+          <div class="input-group">
+            <i class="fa-regular fa-envelope"></i>
+            <input
+              type="email"
+              name="email"
+              placeholder="Inserisci la tua Email"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-key"></i>
+            <input
+              type="password"
+              name="password"
+              placeholder="Inserisci la tua password"
+              required
+            />
+          </div>
+
+          <div class="options">
+            <a href="#" class="forgot-password">Password dimenticata?</a>
+          </div>
+
+          <button type="submit" class="log-in-btn">
+            <i class="fa-solid fa-right-to-bracket"></i> LOG IN
+          </button>
+        </form>
+      </div>
 
         <div class="signup-panel">
             <div class="signup-content">
-                <h2>WELCOME!</h2>
+                <h2>BENVENUTO!</h2>
                 <p>Entra con le tue credenziali e goditi il nostro servizio!</p>
-                <button class="signup-btn">SIGNUP</button>
+                <button class="signup-btn">Registrati</button>
             </div>
         </div>
 
     </div>
-
-</body>
+  </body>
 </html>

@@ -11,10 +11,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "competenza") 
 public class Competenza {
@@ -23,5 +19,24 @@ public class Competenza {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idCompetenza;
 	private String nome;
+	public long getIdCompetenza() {
+		return idCompetenza;
+	}
+	public void setIdCompetenza(long idCompetenza) {
+		this.idCompetenza = idCompetenza;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public Competenza(long idCompetenza, String nome) {
+		this.idCompetenza = idCompetenza;
+		this.nome = nome;
+	}
+	public Competenza() {
+		
+	}
 	
 }

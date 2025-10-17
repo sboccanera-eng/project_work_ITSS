@@ -1,5 +1,6 @@
 package dev2426.ITSProjectWork.Model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +13,7 @@ public class Utente {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idUtente;
+	private long id_utente;	
 	private String nome;
 	private String cognome;
 	private String email;
@@ -20,11 +21,11 @@ public class Utente {
 	private byte[] CV;
 
 	public long getIdUtente() {
-		return idUtente;
+		return id_utente;
 	}
 
 	public void setIdUtente(long idUtente) {
-		this.idUtente = idUtente;
+		this.id_utente = idUtente;
 	}
 
 	public String getNome() {
@@ -69,7 +70,7 @@ public class Utente {
 
 	public Utente(long idUtente, String nome, String cognome, String email, String password, byte[] cV) {
 		super();
-		this.idUtente = idUtente;
+		this.id_utente = idUtente;
 		this.nome = nome;
 		this.cognome = cognome;
 		this.email = email;

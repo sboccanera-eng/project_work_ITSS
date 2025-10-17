@@ -31,11 +31,10 @@ public class UtentiService {
 	
 	public void insert(Utente nuova) {
 		
-		String passwordCriptata = passwordEncoder.encode(nuova.getPassword());
-        nuova.setPassword(passwordCriptata);
-		repo.save(nuova);
-		
-	}
+        nuova.setPassword(passwordEncoder.encode(nuova.getPassword()));
+        repo.save(nuova);
+    }
+
 	
 	public void delete(long idCancella) {
 		repo.deleteById(idCancella);

@@ -11,10 +11,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "tirocinio")
 public class Tirocinio {
@@ -24,5 +20,31 @@ public class Tirocinio {
 	private long idTirocinio;
 	private String mansione;
 	private String durata;
+	public long getIdTirocinio() {
+		return idTirocinio;
+	}
+	public void setIdTirocinio(long idTirocinio) {
+		this.idTirocinio = idTirocinio;
+	}
+	public String getMansione() {
+		return mansione;
+	}
+	public void setMansione(String mansione) {
+		this.mansione = mansione;
+	}
+	public String getDurata() {
+		return durata;
+	}
+	public void setDurata(String durata) {
+		this.durata = durata;
+	}
+	public Tirocinio(long idTirocinio, String mansione, String durata) {
+		this.idTirocinio = idTirocinio;
+		this.mansione = mansione;
+		this.durata = durata;
+	}
+	public Tirocinio() {
+
+	}
 	
 }

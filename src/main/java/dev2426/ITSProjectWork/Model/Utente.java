@@ -18,10 +18,6 @@ public class Utente {
 	private String email;
 	private String password;
 	private byte[] CV;
-	
-	public Utente() {
-		
-	}
 
 	public long getIdUtente() {
 		return idUtente;
@@ -72,12 +68,17 @@ public class Utente {
 	}
 
 	public Utente(long idUtente, String nome, String cognome, String email, String password, byte[] cV) {
+		super();
 		this.idUtente = idUtente;
 		this.nome = nome;
 		this.cognome = cognome;
 		this.email = email;
 		this.password = password;
 		CV = cV;
+	}
+
+	public Utente() {
+		
 	}
 
 }

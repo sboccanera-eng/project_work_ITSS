@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #afe8e8 0%, #009999 100%);
+  background:#FAF9F6;
 }
 
 .container {
@@ -183,9 +183,8 @@ body {
   margin-right: 8px;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Sezione Welcome (Destra) - MODIFICATA CON SFUMATURA VIOLA/BLU */
-/* -------------------------------------------------------------------------- */
+
+
 .signup-panel {
   width: 50%;
   /* Nuova Sfumatura Lineare: Viola in alto a sinistra -> Blu in basso a destra */

@@ -1,44 +1,44 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #afe8e8 0%, #009999 100%); 
+    background-color: #FAF9F6; 
     display: flex;
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center; 
+    align-items: center; 
     min-height: 100vh;
     margin: 0;
 }
 
-/* Contenitore principale della form */
+
 .registration-container {
-    background-color: #ffffff; /* Sfondo bianco per la form */
+    background-color: #ffffff; 
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px; /* Larghezza massima della form */
+    max-width: 400px; 
 }
 
-/* Titolo della form */
+
 .registration-container h2 {
     text-align: center;
     color: #009999; /* Colore d'accento per il titolo */
     margin-bottom: 25px;
 }
 
-/* Gruppo di campi */
+
 .form-group {
     margin-bottom: 15px;
 }
 
-/* Etichette dei campi */
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #333; /* Colore scuro per una buona leggibilità */
+    color: #333; 
 }
 
-/* Stile per i campi di input */
+
 .form-group input:not([type="checkbox"]) {
     width: 100%;
     padding: 10px;
@@ -48,20 +48,20 @@ body {
     transition: border-color 0.3s;
 }
 
-/* Effetto al focus sui campi di input */
+
 .form-group input:focus {
     border-color: #009999; /* Bordo colorato al focus */
     outline: none; /* Rimuove l'outline predefinito del browser */
     box-shadow: 0 0 5px rgba(0, 153, 153, 0.5);
 }
 
-/* Testo piccolo sotto la password */
+
 .form-group small {
     color: #666;
     font-size: 0.8em;
 }
 
-/* Stile per il bottone di submit */
+
 .submit-button {
     width: 100%;
     background-color: #009999; /* Colore principale per il bottone */
@@ -76,12 +76,12 @@ body {
     margin-top: 10px;
 }
 
-/* Effetto hover sul bottone */
+
 .submit-button:hover {
     background-color: #007777; /* Tonalità leggermente più scura al passaggio del mouse */
 }
 
-/* Gruppo checkbox */
+
 .checkbox-group {
     display: flex;
     align-items: center;
@@ -97,7 +97,7 @@ body {
     font-size: 0.9em;
 }
 
-/* Link nella checkbox (es. Privacy) */
+
 .checkbox-group a {
     color: #009999;
     text-decoration: none;

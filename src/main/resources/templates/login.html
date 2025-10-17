@@ -22,13 +22,6 @@
         </div>
         <h2 class="login-title">Login</h2>
 
-        <div th:if="${param.error}">
-          <p
-            style="color: red"
-            th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message}"
-          ></p>
-        </div>
-
         <form class="login-form" th:action="@{/login}">
           <div class="input-group">
             <i class="fa-regular fa-envelope"></i>
@@ -51,9 +44,7 @@
           </div>
 
           <div class="options">
-            <a th:href="/reset-password" class="forgot-password"
-              >Password dimenticata?</a
-            >
+            <a href="#" class="forgot-password">Password dimenticata?</a>
           </div>
 
           <button type="submit" class="log-in-btn">
@@ -62,13 +53,14 @@
         </form>
       </div>
 
-      <div class="signup-panel">
-        <div class="signup-content">
-          <h2>BENVENUTO!</h2>
-          <p>Entra con le tue credenziali e goditi il nostro servizio!</p>
-          <button class="signup-btn">Registrati</button>
+        <div class="signup-panel">
+            <div class="signup-content">
+                <h2>BENVENUTO!</h2>
+                <p>Non hai ancora un account? Registrati!</p>
+                <button class="signup-btn">Registrati</button>
+            </div>
         </div>
-      </div>
+
     </div>
   </body>
 </html>

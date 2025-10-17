@@ -1,4 +1,4 @@
-/* Stile Generale Admin */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #eef1f5;
@@ -8,22 +8,21 @@ body {
 }
 
 .admin-header {
-    background-color: #343a40; /* Grigio scuro/Nero */
+    background-color: #343a40;
     color: white;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    /* Aggiunto padding per il pulsante */
     position: relative; 
 }
 
-/* NUOVI STILI AGGIUNTI PER IL PULSANTE DI SWITCH */
+
 .nav-switch-button {
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    background-color: #007bff; /* Blu, per risaltare */
+    background-color: #007bff; 
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -38,7 +37,7 @@ body {
     background-color: #0056b3;
     color: white;
 }
-/* FINE NUOVI STILI */
+
 
 .admin-container {
     max-width: 1200px;
@@ -46,7 +45,7 @@ body {
     padding: 20px;
 }
 
-/* Sezioni */
+
 section {
     background: white;
     padding: 25px;
@@ -62,7 +61,7 @@ h2 {
     margin-top: 0;
 }
 
-/* 1. Stile Form Esteso Tirocinio */
+
 .tirocinio-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -75,7 +74,7 @@ h2 {
 }
 
 .form-group.full-width {
-    grid-column: 1 / -1; /* Occupa tutta la larghezza */
+    grid-column: 1 / -1;
 }
 
 .tirocinio-form label {
@@ -104,7 +103,7 @@ h2 {
     margin-top: 15px;
 }
 
-/* Pulsanti */
+
 .btn-primary, .btn-secondary {
     padding: 10px 20px;
     border: none;
@@ -132,7 +131,7 @@ h2 {
     background-color: #5a6268;
 }
 
-/* 2. Stile Tabella Candidature */
+
 .candidature-table {
     width: 100%;
     border-collapse: collapse;
@@ -155,7 +154,7 @@ h2 {
     background-color: #f1f1f1;
 }
 
-/* Stili Stato Candidatura */
+
 .status {
     padding: 5px 10px;
     border-radius: 12px;
@@ -165,19 +164,19 @@ h2 {
 }
 
 .status-pending {
-    background-color: #ffc107; /* Giallo */
+    background-color: #ffc107; 
     color: #333;
 }
 
 .status-accepted {
-    background-color: #28a745; /* Verde */
+    background-color: #28a745; 
 }
 
 .status-rejected {
-    background-color: #dc3545; /* Rosso */
+    background-color: #dc3545; 
 }
 
-/* Pulsanti Azioni Tabella */
+
 .btn-action {
     padding: 5px 10px;
     border: 1px solid transparent;
@@ -193,18 +192,18 @@ h2 {
 }
 
 .btn-action.view {
-    background-color: #17a2b8; /* Blu-ciano */
+    background-color: #17a2b8; 
     color: white;
 }
 .btn-action.accept {
-    background-color: #28a745; /* Verde */
+    background-color: #28a745; 
     color: white;
 }
 .btn-action.reject {
-    background-color: #dc3545; /* Rosso */
+    background-color: #dc3545; 
     color: white;
 }
 .btn-action.remove {
-    background-color: #6c757d; /* Grigio */
+    background-color: #6c757d; 
     color: white;
 }

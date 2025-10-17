@@ -1,4 +1,4 @@
-/* Stile Generale */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f9;
@@ -37,7 +37,7 @@ header {
     color: #007373;
 }
 
-/* Container Profilo */
+
 .profile-container {
     max-width: 900px;
     margin: 40px auto;
@@ -47,7 +47,7 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Navigazione Tabs */
+
 .profile-nav {
     display: flex;
     border-bottom: 2px solid #ddd;
@@ -75,7 +75,7 @@ header {
     font-weight: bold;
 }
 
-/* Sezioni Profilo */
+
 .profile-section {
     display: none;
     padding: 10px 0;
@@ -85,7 +85,7 @@ header {
     display: block;
 }
 
-/* Form Modifica Profilo */
+
 .profile-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -154,7 +154,7 @@ header {
     background-color: #5a6268;
 }
 
-/* Lista Candidature */
+
 .candidature-list {
     display: flex;
     flex-direction: column;

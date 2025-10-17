@@ -13,27 +13,33 @@ import dev2426.ITSProjectWork.Repository.AziendeRepository;
 public class AziendaService {
 	
 	@Autowired
-	private AziendeRepository Aziende;
+	private AziendeRepository repo;
 	
-	public List<Azienda> getAllAziende(){
-		return Aziende.findAll();
+	public List<Azienda> getAll(){
+		return repo.findAll();
 	}
 	
-	public void insertAzienda(Azienda nuovaAzienda) {
-		Aziende.save(nuovaAzienda);
+	public void insert(Azienda nuova) {
+		repo.save(nuova);
 	}
 	
 	public void deleteAzienda(long idCancella) {
-		Aziende.deleteById(idCancella);
+		repo.deleteById(idCancella);
 	}
 	
-	public Optional<Azienda> findAzienda(long idAzienda){
-		return Aziende.findById(idAzienda);
+	public Optional<Azienda> find(long idCerca){
+		return repo.findById(idCerca);
 	}
 	
-	public void updateAzienda(Azienda nuovaAzienda, long idAzienda) {
-		Optional<Azienda> aziendaDaTrovare = Aziende.findById(idAzienda);
-		Azienda a = aziendaDaTrovare.get();
+	public void update(Azienda nuova, long idUpdate) {
+		Optional<Azienda> found = repo.findById(idUpdate);
+		Azienda a = found.get();
+		a.setIdAzienda(nuova.getIdAzienda());
+		a.setIdTirocinio(nuova.getIdTirocinio());
+		a.setLocalita(nuova.getLocalita());
+		a.setNome(nuova.getNome());
+		a.setPartitaIva(nuova.getPartitaIva());
+		repo.save(a);
 	}
 	
 

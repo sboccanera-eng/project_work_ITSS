@@ -44,11 +44,54 @@
             </form>
         </div>
 
+<<<<<<< HEAD
         <div class="signup-panel">
             <div class="signup-content">
                 <h2>WELCOME!</h2>
                 <p>Entra con le tue credenziali e goditi il nostro servizio!</p>
                 <button class="signup-btn">SIGNUP</button>
+=======
+        <div th: if="${param.error}">
+          <p class="text-danger" th:text="${session.SPRING_SECURITY_LAST_EXCEPTION.message}"></p>
+        </div>
+
+        <form class="login-form" th:action="@{/login}">
+          <div class="input-group">
+            <i class="fa-regular fa-envelope"></i>
+            <input
+              type="email"
+              name="email"
+              placeholder="Inserisci la tua Email"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <i class="fa-solid fa-key"></i>
+            <input
+              type="password"
+              name="password"
+              placeholder="Inserisci la tua password"
+              required
+            />
+          </div>
+
+          <div class="options">
+            <a href="#" class="forgot-password">Password dimenticata?</a>
+          </div>
+
+          <button type="submit" class="log-in-btn">
+            <i class="fa-solid fa-right-to-bracket"></i> LOG IN
+          </button>
+        </form>
+      </div>
+
+        <div class="signup-panel">
+            <div class="signup-content">
+                <h2>BENVENUTO!</h2>
+                <p>Non hai un'account? Registrati ora!</p>
+                <a href="registrazione.html"><button class="signup-btn">Registrati</button></a>
+>>>>>>> main
             </div>
         </div>
 

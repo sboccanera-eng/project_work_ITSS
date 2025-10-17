@@ -28,7 +28,7 @@ public class SecurityConfig {
       
             .authorizeHttpRequests(auth -> auth
                 // permette accesso a tutti a queste pagine
-                .requestMatchers("/login", "/register", "/css/**", "/js/**").permitAll()
+                .requestMatchers("/login", "/register", "/css/**", "/js/**", "/login.css", "/image/***").permitAll()
                 
                 // altre richieste richiedono autenticazione
                 .anyRequest().authenticated()

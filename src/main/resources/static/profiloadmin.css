@@ -1,68 +1,70 @@
-/* Stile Generale Admin */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #eef1f5;
+    background: linear-gradient(135deg, #96dbdb 0%, #e0eeee 100%);
     color: #333;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
+
 
 .admin-header {
-    background-color: #343a40; /* Grigio scuro/Nero */
+    background-color: #009999;
     color: white;
-    padding: 20px;
+    padding: 25px 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    /* Aggiunto padding per il pulsante */
-    position: relative; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
 }
 
-/* NUOVI STILI AGGIUNTI PER IL PULSANTE DI SWITCH */
 .nav-switch-button {
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    background-color: #007bff; /* Blu, per risaltare */
+    background-color: #004f4f;
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
     border: 1px solid #007bff;
 }
 
 .nav-switch-button:hover {
-    background-color: #0056b3;
-    color: white;
+    background-color: #005555;
+    transform: translateY(-50%) scale(1.03);
 }
-/* FINE NUOVI STILI */
+
 
 .admin-container {
     max-width: 1200px;
-    margin: 30px auto;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* Sezioni */
+
 section {
     background: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
 }
 
 h2 {
-    color: #007bff;
+    color: black;
     border-bottom: 2px solid #f0f0f0;
     padding-bottom: 10px;
     margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
-/* 1. Stile Form Esteso Tirocinio */
+/* ==== FORM TIROCINIO ==== */
 .tirocinio-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -75,52 +77,64 @@ h2 {
 }
 
 .form-group.full-width {
-    grid-column: 1 / -1; /* Occupa tutta la larghezza */
+    grid-column: 1 / -1;
 }
 
 .tirocinio-form label {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: 600;
     color: #555;
 }
 
-.tirocinio-form input[type="text"], 
+.tirocinio-form input[type="text"],
 .tirocinio-form textarea {
-    padding: 10px;
+    padding: 10px 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 6px;
+    font-size: 15px;
     width: 100%;
     box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.tirocinio-form input:focus,
+.tirocinio-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 .tirocinio-form textarea {
     resize: vertical;
+    min-height: 100px;
 }
 
 .form-actions {
+    grid-column: 1 / -1;
     display: flex;
     gap: 15px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
-/* Pulsanti */
-.btn-primary, .btn-secondary {
-    padding: 10px 20px;
+/* ==== PULSANTI ==== */
+.btn-primary,
+.btn-secondary {
+    padding: 10px 22px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #009999;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #005555;
+    transform: scale(1.03);
 }
 
 .btn-secondary {
@@ -130,19 +144,23 @@ h2 {
 
 .btn-secondary:hover {
     background-color: #5a6268;
+    transform: scale(1.03);
 }
 
-/* 2. Stile Tabella Candidature */
+/* ==== TABELLA CANDIDATURE ==== */
 .candidature-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    font-size: 14px;
 }
 
-.candidature-table th, .candidature-table td {
-    padding: 12px 15px;
+.candidature-table th,
+.candidature-table td {
+    padding: 14px 18px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    vertical-align: middle;
 }
 
 .candidature-table th {
@@ -155,56 +173,62 @@ h2 {
     background-color: #f1f1f1;
 }
 
-/* Stili Stato Candidatura */
+/* ==== STATI DELLA CANDIDATURA ==== */
 .status {
-    padding: 5px 10px;
-    border-radius: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
-    color: white;
+    display: inline-block;
 }
 
 .status-pending {
-    background-color: #ffc107; /* Giallo */
+    background-color: #ffc107;
     color: #333;
 }
 
 .status-accepted {
-    background-color: #28a745; /* Verde */
+    background-color: #28a745;
+    color: white;
 }
 
 .status-rejected {
-    background-color: #dc3545; /* Rosso */
+    background-color: #dc3545;
+    color: white;
 }
 
-/* Pulsanti Azioni Tabella */
+/* ==== PULSANTI AZIONE TABELLA ==== */
 .btn-action {
-    padding: 5px 10px;
-    border: 1px solid transparent;
+    padding: 6px 12px;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 5px;
     font-size: 12px;
-    transition: opacity 0.2s;
+    font-weight: 600;
+    margin-right: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-action:hover {
-    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 .btn-action.view {
-    background-color: #17a2b8; /* Blu-ciano */
+    background-color: #17a2b8;
     color: white;
 }
+
 .btn-action.accept {
-    background-color: #28a745; /* Verde */
+    background-color: #28a745;
     color: white;
 }
+
 .btn-action.reject {
-    background-color: #dc3545; /* Rosso */
+    background-color: #dc3545;
     color: white;
 }
+
 .btn-action.remove {
-    background-color: #6c757d; /* Grigio */
+    background-color: #6c757d;
     color: white;
 }

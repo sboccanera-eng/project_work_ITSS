@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family:century Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     background: linear-gradient(135deg, #96dbdb 0%, #e0eeee 100%);
     display: flex;
     justify-content: center; 
@@ -21,8 +21,9 @@ body {
 
 .registration-container h2 {
     text-align: center;
-    color: #009999; /* Colore d'accento per il titolo */
-    margin-bottom: 25px;
+    color: #009999; 
+    font-size: 50px;
+    margin-bottom: 30px;
 }
 
 

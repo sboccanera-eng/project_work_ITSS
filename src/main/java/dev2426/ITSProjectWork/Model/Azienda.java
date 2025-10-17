@@ -15,6 +15,10 @@ import lombok.Setter;
 @Table(name = "azienda")
 public class Azienda {
 	
-	
+	private long idAzienda;
+	private String nome;
+	private String localita;
+	private String partitaIva;
+	private long idTirocinio;
 
 }

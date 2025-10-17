@@ -35,17 +35,15 @@ body {
 .logo-placeholder {
     /* Posizionamento e stile della corona (o logo) in alto a sinistra */
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30px;
+    left: 30px;
     width: 60px;
-    height: 60px;
-    background-color: #009999; 
+    height: 60px; 
     border-radius: 0 0 100% 0; 
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translate(-20px, -20px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo-placeholder .fa-crown {
